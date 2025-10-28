@@ -1,0 +1,10 @@
+queue(x) Tilføjer element bagerst i Køen
+dequeue() Fjerner det forreste element i Køen
+peek() Returnere det øverste element fra Køen
+
+Add, offer
+Remove, poll
+peek, 
+
+
+FIFO = First in First out

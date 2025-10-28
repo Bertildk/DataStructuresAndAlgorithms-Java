@@ -1,0 +1,5 @@
+push(x) Skubber element øverst i stakken
+pop() Fjerne øverste element fra stacken
+peek() returnere øverste element fra stacken
+
+FILO = First in Last out

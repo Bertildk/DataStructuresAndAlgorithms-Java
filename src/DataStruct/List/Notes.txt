@@ -1,0 +1,25 @@
+Linked Lists, is a Linear data structure where elements are called nodes. Which are connected together using pointers.
+Each node has at a minimum a data which is the value stored, and a Pointer which is the reference or adress to the next node in the List.
+
+Types of Linked Lists:
+
+Singly Linked Lists
+    Each node only points to the next node.
+    Last node is Null
+
+Doublly Linked Lists
+    Each node points to the previous and the next node.
+    Allows traversal in both directions
+Circular Linked Lists
+    Can be both doubly or singly
+    The last node points to the first node. 
+
+Linked lists vs Array
+Arrays are fixed sizes, with fast random access O(1) access. 
+Linked lists are scattered in memory, they have a dynamic size, but access is slower O(n) to access each node. 
+
+the HEAD of a Linked list refers to the first value of the List. 
+
+Rule of Thumb:
+    Use ArrayList when you need fast lookups and fewer modifications.
+    Use LinkedList when you need lots of insertions/removals, especially at the head or tail.
