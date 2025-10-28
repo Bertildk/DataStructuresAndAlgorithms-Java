@@ -1,3 +1,4 @@
+package DataStruct.Exersices1;
 public class Exercise2A {  // Case insensitive char counter in a String via recursion
 
     public static void main(String[] args) {

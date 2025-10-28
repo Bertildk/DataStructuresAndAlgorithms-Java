@@ -1,3 +1,4 @@
+package JavaTest;
 import java.util.Arrays;
 
 public class longestCommonPrefix{

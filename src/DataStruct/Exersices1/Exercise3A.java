@@ -1,3 +1,4 @@
+package DataStruct.Exersices1;
 public class Exercise3A {
     public static void main(String[] args) {
         System.out.println(sum(5));

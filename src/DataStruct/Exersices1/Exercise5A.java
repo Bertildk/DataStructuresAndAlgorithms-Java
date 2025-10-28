@@ -1,3 +1,4 @@
+package DataStruct.Exersices1;
 public class Exercise5A { // Given a String s, char c, int l. Return true if c is within the length of L recursively
     public static void main(String[] args) {
         System.out.println(linear("Tehtøityuieadsaest", 'ø', 14));

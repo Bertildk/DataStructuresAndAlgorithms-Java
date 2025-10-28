@@ -1,7 +1,7 @@
-package DataStruct.Sorting;
+package AlgoritmerOgSortering.Sorting;
 
 import java.util.Arrays;
-
+//rekursiv sorterings algoritme der deler et array i to halvdele, sortere hver halvdel og merge dem sammen igen.
 public class mergeSort {
     public static void main(String[] args) {
         int[] arr = {2,6,2,1,7,9,3,1,3,6};

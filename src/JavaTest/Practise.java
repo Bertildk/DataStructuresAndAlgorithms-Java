@@ -1,3 +1,4 @@
+package JavaTest;
 public class Practise{
     public static void main(String[] args) {
         System.out.println(recursionAmountOfDigits(-15263));

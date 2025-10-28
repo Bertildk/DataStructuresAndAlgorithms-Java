@@ -1,3 +1,4 @@
+package JavaTest;
 public class Practise6 {
     public static void main(String[] args) {
         System.out.println(recursiveSumOddNumbers(10));

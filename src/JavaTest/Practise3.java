@@ -1,3 +1,4 @@
+package JavaTest;
 public class Practise3 {
     public static void main(String[] args) {
         int a = 2, b = 3;

@@ -1,3 +1,4 @@
+package DataStruct.Exersices1;
 public class Exercise1A{
     public static void main(String[] args) {
         System.out.println(logTwo(4096));

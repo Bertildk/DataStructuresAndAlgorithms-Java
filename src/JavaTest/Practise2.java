@@ -1,3 +1,4 @@
+package JavaTest;
 import java.util.ArrayList;
 
 public class Practise2 {

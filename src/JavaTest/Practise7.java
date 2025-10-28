@@ -1,5 +1,4 @@
-
-
+package JavaTest;
 public class Practise7 {
     public static void main(String[] args) {
         int nums[] = {1,2,2,3,3,3,3,3,3,3,3,3,3,4,5,6};

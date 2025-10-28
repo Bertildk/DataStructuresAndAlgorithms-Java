@@ -1,4 +1,4 @@
-package DataStruct.Sorting;
+package AlgoritmerOgSortering.Sorting;
 
 public class bucketSort {
     //Iterer gennem arrayet, placer hvert element i en bucket baseret på range, derefter sorter hver bucket individuelt (f.eks. med insertion sort),

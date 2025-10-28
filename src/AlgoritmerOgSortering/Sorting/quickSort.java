@@ -1,5 +1,8 @@
-package DataStruct.Sorting;
+package AlgoritmerOgSortering.Sorting;
 public class quickSort {
+//quick sort er en divide and qonquer, hvor rekursion bruges til at sortere mindre og mindre dele af et array. 
+// Man vælger et pivot, her er det sidste element i arrayet, og så partitionere man arrayet så at alle elementer < pivot er til venstre for pivot og omvendt for elemter > pivot.
+// Herefter kalder man quicksort rekursivt på venstre og højre side af pivot.
     public static void main(String[] args) {
         int[] arr = {34, 7, 23, 32, 5, 62, 42};
 

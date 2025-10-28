@@ -1,12 +1,12 @@
-package DataStruct.Sorting;
+package AlgoritmerOgSortering.Sorting;
 
 public class sortingPractice {
     public static void main(String[] args) {
         int[] arr = {5,3,8,6,2,7,4,1};
         int[] arr2 = {12,11,13,5,6,7};
         int[] arr3 = {3,7,23,32,5,62,42};
-        insertionSort(arr);
-        mergeSort(arr2, 0, arr2.length - 1);
+        insertionSort(arr); // TODO
+        quickSort(arr2, 0, arr2.length - 1);
         mergeSort(arr3, 0, arr3.length - 1);
         for (int i : arr) {
             System.out.print(i + " ");
