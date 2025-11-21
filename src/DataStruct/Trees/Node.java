@@ -61,23 +61,48 @@ public class Node {
         return this;
     }
     boolean contains(int val){
+        //checking if a node has the data value of param
+        if(this.data == val) return true;
+        if(val > this.data && this.RChild != null){
+            return RChild.contains(val);
+        }else if(val < this.data && this.LChild != null){
+            return LChild.contains(val);
+        }
+        
         return false;
     }
     Node findMin(){
         if(this.LChild != null){
             return this.LChild.findMin();
-        }else{
-            return this;
         }
+        return this;
+        
     }
-    int findMax(){
-        return -1;
+    Node findMax(){
+        if(this.RChild != null){
+            return this.RChild.findMax();
+        }
+        return this;
+        
     }
-    boolean isEmpty(){
+
+    public static boolean isEmpty(Node root){
+        if(root == null){
+            return true;
+        }
         return false;
     }
-    void makeEmpty(){
 
+    Node makeEmpty(){
+        if(this.LChild != null){//Remove from Left Side first
+            this.LChild = this.LChild.makeEmpty();
+        }
+        if(this.RChild != null){ //Remove from right side
+            this.RChild = this.RChild.makeEmpty();
+        }
+    
+        //if both children are null, remove node
+        return null;
     }
     void printTree(Node Node){
         while (Node != null) {
