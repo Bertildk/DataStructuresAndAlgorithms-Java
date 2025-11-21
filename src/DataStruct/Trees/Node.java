@@ -104,11 +104,17 @@ public class Node {
         //if both children are null, remove node
         return null;
     }
-    void printTree(Node Node){
-        while (Node != null) {
-            System.out.println(Node.LChild);
-            Node = Node.LChild;
-        }
+    static void printTree(Node node){
+        if(node == null) return;
+        printTree(node.LChild);
+        System.out.print(node.data + " ");
+        printTree(node.RChild);
     }
-    
+    private static final String INDENT = "    ";
+    static void printPrettyTree(Node node, int depth){
+        if(node == null) return;
+        printPrettyTree(node.RChild, depth+1);
+        System.out.println(INDENT.repeat(depth) + node.data);
+        printPrettyTree(node.LChild, depth+1);
+    }
 }

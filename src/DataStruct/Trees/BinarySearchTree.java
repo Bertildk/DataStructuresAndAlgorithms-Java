@@ -3,9 +3,13 @@ package DataStruct.Trees;
 public class BinarySearchTree {
     public static void main(String[] args) {
         Node root = new Node(10);
-        root.insert(5);
-        root.insert(12);
+        root.insert(6);
+        root.insert(11);
+        root.insert(4);
+        root.insert(15);
         root.insert(9);
+        root.insert(12);
+
         System.out.println(root.data);
         System.out.println(root.LChild.data);
         System.out.println(root.RChild.data);
@@ -23,6 +27,10 @@ public class BinarySearchTree {
         if(root.findMin().data == 5) System.out.println("findMin method working!");
         else System.out.println("findMin method not working!");
 
+        System.out.println("Calling  printTree");
+        Node.printTree(root);
+        System.out.println();
+        Node.printPrettyTree(root, 0);
         root = root.makeEmpty();
         if(Node.isEmpty(root)) System.out.println("makeEmpty method working!\nisEmpty method working!");
         else System.out.println("makeEmpty or isEmpty not working!");
