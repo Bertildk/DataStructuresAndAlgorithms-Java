@@ -2,8 +2,8 @@ package DataStruct.Trees;
 
 public class Node {
     int data;
-    Node RChild;
-    Node LChild;
+    public Node RChild;
+    public Node LChild;
     public Node(int data){
         this.data = data;
         this.RChild = null;
@@ -104,12 +104,30 @@ public class Node {
         //if both children are null, remove node
         return null;
     }
-    static void printTree(Node node){
+    static void printTreeInOrderTraversal(Node node){
         if(node == null) return;
-        printTree(node.LChild);
+        printTreeInOrderTraversal(node.LChild);
         System.out.print(node.data + " ");
-        printTree(node.RChild);
+        printTreeInOrderTraversal(node.RChild);
     }
+    static void printTreePreOrderTraversal(Node node){
+        if(node == null) return;
+        System.out.print(node.data + " ");
+        printTreePreOrderTraversal(node.LChild);
+        printTreePreOrderTraversal(node.RChild);
+    }
+    static void printTreePostOrderTraversal(Node node){
+       if(node == null) return;
+       printTreePostOrderTraversal(node.LChild);
+       printTreePostOrderTraversal(node.RChild);
+       System.out.print(node.data +" ");
+    }
+    int calculateInternalPathLength(Node node, int depth){ // Sum of depth of all internal nodes
+        if(node == null) return 0;
+        if(node.LChild == null && node.RChild == null) return 0;
+        return depth + calculateInternalPathLength(node.LChild, depth + 1) + calculateInternalPathLength(node.RChild, depth + 1);
+    }
+
     private static final String INDENT = "    ";
     static void printPrettyTree(Node node, int depth){
         if(node == null) return;
@@ -117,4 +135,17 @@ public class Node {
         System.out.println(INDENT.repeat(depth) + node.data);
         printPrettyTree(node.LChild, depth+1);
     }
+    static Node buildPerfectTree(int[] arr, int start, int end){ //Assumes array is sorted, for it to become a Perfect BST, otherwise it would just be perfect. 
+        if(start > end) return null;
+
+        int midIndex = start + (end - start) / 2;
+        Node node = new Node(arr[midIndex]);
+
+        node.LChild = buildPerfectTree(arr, start, midIndex-1);
+        node.RChild = buildPerfectTree(arr, midIndex+1, end);
+        
+        return node;
+    }
+    
+
 }
