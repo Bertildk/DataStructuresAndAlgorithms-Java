@@ -104,7 +104,7 @@ public class Node {
         //if both children are null, remove node
         return null;
     }
-    static void printTreeInOrderTraversal(Node node){
+    public static void printTreeInOrderTraversal(Node node){
         if(node == null) return;
         printTreeInOrderTraversal(node.LChild);
         System.out.print(node.data + " ");
@@ -122,7 +122,7 @@ public class Node {
        printTreePostOrderTraversal(node.RChild);
        System.out.print(node.data +" ");
     }
-    int calculateInternalPathLength(Node node, int depth){ // Sum of depth of all internal nodes
+    public static int calculateInternalPathLength(Node node, int depth){ // Sum of depth of all internal nodes
         if(node == null) return 0;
         if(node.LChild == null && node.RChild == null) return 0;
         return depth + calculateInternalPathLength(node.LChild, depth + 1) + calculateInternalPathLength(node.RChild, depth + 1);

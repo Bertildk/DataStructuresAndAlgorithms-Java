@@ -24,11 +24,6 @@ public class Task2 {
         System.out.println(branchCounter(node));
     }
     public static int branchCounter(Node node){
-        //Branch is when, Node has a child, and that child is a leaf. 
-        //The node has no siblings
-        //The nodes child has no siblings
-
-        //Iterate over the tree, Check for each node above conditions
         if(node == null) return 0;
         
         if(checkIfbranch(node)) return 1 + branchCounter(node.LChild) + branchCounter(node.RChild);
