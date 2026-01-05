@@ -68,25 +68,44 @@ public class BreadthFirstSearch {
     And so on…
      */
     public void bfs(Map<Integer, List<Integer>> graph, int start){
-        boolean marked[] = new boolean[graph.size()];
+        boolean[] marked = new boolean[graph.size()];
         Queue<Integer> q = new LinkedList<>();
-
-        marked[start] = true;
         q.add(start);
+        marked[start] = true;
 
         while(!q.isEmpty()){
             int current = q.poll();
-            System.out.print(current + " ");
-            for (Integer neighboor : graph.get(current)) {
-                if(!marked[neighboor]){
-                    marked[neighboor] = true;
-                    q.add(neighboor);
+            System.out.println(current +" ");
+            for (Integer integer : graph.get(current)) {
+                if(!marked[integer]){
+                    q.add(integer);
+                    marked[integer] = true;
                 }
             }
-
         }
-        System.out.println();
+
+
     }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public int DistanceBFS(Map<Integer, List<Integer>> graph, int start, int target){
         boolean marked[] = new boolean[graph.size()];
